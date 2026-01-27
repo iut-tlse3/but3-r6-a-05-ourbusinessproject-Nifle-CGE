@@ -7,6 +7,7 @@ import jakarta.validation.constraints.NotEmpty;
 
 @Entity
 public class Project {
+
     @Id
     @GeneratedValue
     private Long id;

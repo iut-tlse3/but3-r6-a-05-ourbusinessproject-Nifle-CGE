@@ -9,6 +9,7 @@ import jakarta.validation.constraints.Size;
 
 @Entity
 public class Enterprise {
+
     @Id
     @GeneratedValue
     private Long id;
