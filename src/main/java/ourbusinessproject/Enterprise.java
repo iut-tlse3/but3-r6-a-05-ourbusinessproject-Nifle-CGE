@@ -8,10 +8,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 public class Enterprise {
@@ -86,7 +83,7 @@ public class Enterprise {
 
     public void addProject(Project project) {
         if (projects == null) {
-            projects = new ArrayList<Project>();
+            projects = new HashSet<Project>();
         }
         projects.add(project);
     }
