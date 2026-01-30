@@ -19,6 +19,9 @@ public class InitializationService {
 
     @Transactional
     public void initProjects() {
+        // L'annotation @Transactional lance une transaction au debut de l'execution de la fonction et cela permet que
+        // si une etape dans la creation des donnees initiales echoue, aucune donnee n'est ecrite.
+
         enterprise1 = enterpriseProjectService.newEnterprise("enterprise1", "description1", "contactName1", "mail1@mail.com");
         enterprise2 = enterpriseProjectService.newEnterprise("enterprise2", "description2", "contactName2", "mail2@mail.com");
 
