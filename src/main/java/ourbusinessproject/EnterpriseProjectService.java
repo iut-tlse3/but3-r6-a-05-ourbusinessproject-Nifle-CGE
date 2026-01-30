@@ -53,7 +53,7 @@ public class EnterpriseProjectService {
     }
 
     public List<Project> findAllProjects() {
-        String query = "select p from Project p order by p.title";
+        String query = "select p from Project p join fetch p.enterprise order by p.title";
         TypedQuery<Project> projects = this.entityManager.createQuery(query, Project.class);
         return projects.getResultList();
     }

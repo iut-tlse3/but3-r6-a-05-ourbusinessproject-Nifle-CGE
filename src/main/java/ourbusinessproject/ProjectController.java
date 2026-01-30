@@ -1,13 +1,11 @@
 package ourbusinessproject;
 
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/projects")
 public class ProjectController {
 
     private EnterpriseProjectService enterpriseProjectService;
@@ -16,7 +14,7 @@ public class ProjectController {
         this.enterpriseProjectService = enterpriseProjectService;
     }
 
-    @GetMapping
+    @RequestMapping("/api/projects")
     public List<Project> findAllProjectsWithEnterprises() {
         return enterpriseProjectService.findAllProjects();
     }
